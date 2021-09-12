@@ -45,7 +45,7 @@ export function removeErrorStyle(item) {
 export function isEmpty(item) {
   return !item.value;
 }
-export function alertMessage(status, mes) {
+export function tempAlertMessage(status, mes) {
   this.insertAdjacentHTML(
     "beforeend",
     `<div class="alert ${status}">${mes}</div>`

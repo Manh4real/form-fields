@@ -1,6 +1,6 @@
 import { Validation } from "./js/validation.js";
 import { showHidePW, TAKEN_NAMES } from "./js/minor.js";
-import { alertMessage } from "./js/minor.js";
+import { tempAlertMessage } from "./js/minor.js";
 
 const nameInput = document.querySelector("#name-input");
 const emailInput = document.querySelector("#email-input");
@@ -55,7 +55,7 @@ pwInput.addEventListener("focus", function () {
 });
 btn.onclick = submitFields;
 function success() {
-  alertMessage.call(btn, "success", "All done!");
+  tempAlertMessage.call(btn, "success", "All done!");
 }
 window.addEventListener("keydown", switchField);
 
