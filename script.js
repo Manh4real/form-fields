@@ -11,10 +11,10 @@ const btn = document.querySelector(".sign-up-btn");
 const fields = document.querySelectorAll(".field input");
 
 window.addEventListener("load", function () {
+  showHidePW();
   setTimeout(() => {
     nameInput.focus();
   }, 800);
-  showHidePW();
 });
 
 let validation = new Validation(

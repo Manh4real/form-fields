@@ -6,7 +6,6 @@ export const TAKEN_NAMES = [
   "Van Manh",
   "Nguyen Manh",
 ];
-
 export function alertMessage(status, mes) {
   let check = this.querySelector(".alert.error");
   if (check) check.remove();
