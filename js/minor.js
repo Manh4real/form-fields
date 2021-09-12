@@ -45,3 +45,13 @@ export function removeErrorStyle(item) {
 export function isEmpty(item) {
   return !item.value;
 }
+export function alertMessage(status, mes) {
+  this.insertAdjacentHTML(
+    "beforeend",
+    `<div class="alert ${status}">${mes}</div>`
+  );
+  let alertMes = document.querySelectorAll(`.alert`);
+  setTimeout(function () {
+    alertMes.forEach((mes) => mes.remove());
+  }, 1200);
+}

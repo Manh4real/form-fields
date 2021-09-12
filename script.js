@@ -1,6 +1,6 @@
 import { Validation } from "./js/validation.js";
 import { showHidePW, TAKEN_NAMES } from "./js/minor.js";
-import { alertMessage } from "../project 7/index.js";
+import { alertMessage } from "./js/minor.js";
 
 const nameInput = document.querySelector("#name-input");
 const emailInput = document.querySelector("#email-input");
