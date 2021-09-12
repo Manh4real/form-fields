@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+    <script src="./script.js" type="module" defer></script>
+  </head>
+  <body>
+    <section class="main">
+      <div class="container">
+        <div class="content">
+          <form>
+            <div class="field name-field">
+              <input
+                autocomplete="off"
+                type="text"
+                required
+                name="name-input"
+                id="name-input"
+              />
+              <label for="name-input" class="label-text">Name</label>
+            </div>
+            <div class="field email-field">
+              <input
+                autocomplete="off"
+                type="text"
+                required
+                name="email-input"
+                id="email-input"
+              />
+              <label for="email-input" class="label-text">email</label>
+            </div>
+            <div class="field phone-field">
+              <input
+                autocomplete="off"
+                type="text"
+                required
+                name="phone-input"
+                id="phone-input"
+              />
+              <label for="phone-input" class="label-text">phone</label>
+            </div>
+            <div class="field pw pw-field">
+              <div class="show-pw" title="Show Password">
+                <i class="fas fa-eye"></i>
+              </div>
+              <input
+                autocomplete="off"
+                type="password"
+                required
+                spellcheck="false"
+                name="pw-input"
+                id="pw-input"
+              />
+              <label for="pw-input" class="label-text">password</label>
+              <p class="message">
+                Use 8 or more characters with a mix of letters, numbers &
+                symbols
+              </p>
+            </div>
+            <div class="field pw confirm-field">
+              <div class="show-pw">
+                <i class="fas fa-eye"></i>
+              </div>
+              <input
+                autocomplete="off"
+                type="password"
+                required
+                name="confirm-input"
+                id="confirm-input"
+              />
+              <label for="confirm-input" class="label-text"
+                >confirm password</label
+              >
+            </div>
+          </form>
+          <div class="btn">
+            <button class="sign-up-btn">Sign up</button>
+          </div>
+          <div class="bottom-text">
+            <span class="para">Already have an account?</span>
+            <a href="./log-in.html">Log In</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

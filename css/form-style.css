@@ -1,0 +1,38 @@
+input:focus + .label-text,
+input:valid + .label-text {
+  color: #53aff1;
+  font-size: 12px;
+  top: 0;
+  left: 3px;
+  transform: translateY(-100%);
+}
+input:focus,
+input:valid {
+  border-color: #53aff1;
+}
+
+.field.error input {
+  border-color: #ff4747;
+}
+.field.error .label-text {
+  color: #ff4747;
+}
+.alert.success {
+  position: absolute;
+  color: rgb(5, 221, 77);
+  border-radius: 8px;
+  padding: 5px;
+  top: 50%;
+  right: -15px;
+  font-size: 12px;
+  font-weight: bold;
+  transform: translate(100%, -50%);
+}
+.alert.error {
+  position: absolute;
+  bottom: -3px;
+  transform: translateY(100%);
+  font-size: 11px;
+  color: #ff4747;
+  font-weight: bold;
+}

@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto");
+@import "./form-style.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  max-height: 792px;
+  min-width: 500px;
+  font-family: "Roboto", sans-serif;
+  padding: 2rem;
+}
+.container {
+  width: 450px;
+  min-height: 600px;
+  height: 600px;
+  margin: 0 auto;
+  animation: animate 0.35s ease-out;
+}
+.content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #faf9f9;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2rem 0 2rem 0;
+  overflow: hidden;
+}
+.content::before {
+  content: "sign up";
+  position: absolute;
+  top: 0;
+  width: 516px;
+  transform: translateY(50%) rotate(-30deg);
+  font-size: 9rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: #53aff13d;
+}
+input {
+  background: #fff;
+  border: 2px solid #666;
+  width: 100%;
+  height: 40px;
+  padding: 12px;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  color: #666;
+  font-weight: 500;
+  transition: all 0.2s ease-out;
+}
+form {
+  margin: 0 auto;
+  width: 300px;
+  /* height: 352px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.field {
+  position: relative;
+  font-size: 15px;
+  margin-bottom: 38px;
+}
+.pw-field .message {
+  position: absolute;
+  bottom: -1.5px;
+  left: 12px;
+  transform: translateY(100%);
+  font-size: 11px;
+  color: #666;
+}
+.pw .show-pw {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #444;
+  font-size: 16px;
+}
+.label-text {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #666;
+  font-weight: bold;
+  text-transform: capitalize;
+  transition: all 0.2s ease-out;
+}
+.sign-up-btn {
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-transform: capitalize;
+  background-color: #53aff1;
+  color: #fff;
+  font-weight: bold;
+  border: 2px solid #53aff1;
+  position: relative;
+  z-index: 100;
+  transition: all 0.2s linear;
+}
+.bottom-text {
+  font-size: 11px;
+  font-weight: lighter;
+}
+.bottom-text a {
+  color: #53aff1;
+  font-weight: bold;
+  text-decoration: none;
+}
+.sign-up-btn:hover {
+  background: transparent;
+  color: #53aff1;
+}
+
+.bottom-text a:hover {
+  text-decoration: underline;
+}
+
+/* ANIMATION */
+@keyframes animate {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
