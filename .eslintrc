@@ -1,0 +1,16 @@
+{
+  "extends": "eslint:recommended",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es9": true
+  },
+  "rules": {
+    "no-console": 0,
+    "indent": 2
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
+  }
+}

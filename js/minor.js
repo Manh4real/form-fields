@@ -1,4 +1,15 @@
-export const TAKEN_NAMES = [
+export {
+  TAKEN_NAMES,
+  alertMessage,
+  showHidePW,
+  errorAlertTaken,
+  removeErrorStyle,
+  isEmpty,
+  tempAlertMessage,
+  switchOnIntermediateElems,
+};
+
+const TAKEN_NAMES = [
   "Nguyen",
   "Van",
   "Manh",
@@ -6,15 +17,14 @@ export const TAKEN_NAMES = [
   "Van Manh",
   "Nguyen Manh",
 ];
-export function alertMessage(status, mes) {
-  let check = this.querySelector(".alert.error");
-  if (check) check.remove();
+function alertMessage(status, mes) {
+  this.querySelector(".alert.error")?.remove();
   this.insertAdjacentHTML(
     "beforeend",
     `<div class="alert ${status}">${mes}</div>`
   );
 }
-export function showHidePW() {
+function showHidePW() {
   const showPW = document.querySelectorAll(".show-pw");
   showPW.forEach(run);
 
@@ -31,26 +41,32 @@ export function showHidePW() {
     };
   }
 }
-export function errorAlertTaken(item, mes) {
+function errorAlertTaken(item, mes) {
   item.parentNode.querySelector(".message")?.remove();
   alertMessage.call(item.parentNode, "error", mes);
   item.parentNode.classList.add("error");
   return false;
 }
-export function removeErrorStyle(item) {
+function removeErrorStyle(item) {
   item.parentNode.classList.remove("error");
   item.parentNode.querySelector(".alert.error")?.remove();
 }
-export function isEmpty(item) {
+function isEmpty(item) {
   return !item.value;
 }
-export function tempAlertMessage(status, mes) {
+function tempAlertMessage(status, mes) {
   this.insertAdjacentHTML(
     "beforeend",
     `<div class="alert ${status}">${mes}</div>`
   );
   let alertMes = document.querySelectorAll(`.alert`);
-  setTimeout(function () {
+  setTimeout(() => {
     alertMes.forEach((mes) => mes.remove());
   }, 1200);
+}
+function switchOnIntermediateElems(activeEl) {
+  // "this" - fields collection.
+  this.forEach((field, i) => {
+    if (activeEl == field) this[i + 1]?.focus();
+  });
 }

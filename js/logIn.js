@@ -3,6 +3,7 @@ import {
   showHidePW,
   errorAlertTaken,
   removeErrorStyle,
+  switchOnIntermediateElems,
 } from "./minor.js";
 
 const btnEl = document.querySelector(".btn");
@@ -23,6 +24,7 @@ window.addEventListener("load", function () {
   }, 800);
   showHidePW(); // active show-hide password functionality
 });
+window.addEventListener("keydown", switchField);
 
 class Confirmation {
   constructor(name, password) {
@@ -60,7 +62,7 @@ btn.onclick = submitFields;
 nameInput.onfocus = passwordInput.onfocus = function () {
   removeErrorStyle(this);
 };
-function errorMes() {
+function showErrorMes() {
   console.log("empty");
   removeMes();
   let p = document.createElement("p");
@@ -68,7 +70,7 @@ function errorMes() {
   p.textContent = "Incorrect name or password";
   btnEl.append(p);
 }
-function successMes() {
+function showSuccessMes() {
   console.log("success");
   removeMes();
   let p = document.createElement("p");
@@ -81,21 +83,18 @@ function removeMes() {
   btnEl.querySelector(".alert.incorrect")?.remove();
   btnEl.querySelector(".alert.fulfilled")?.remove();
 }
-
-window.addEventListener("keydown", switchField);
 function switchField(e) {
   // click "Enter", then switch to next field, if there's last field then do submit.
   if (e.key != "Enter") return;
   let a = document.activeElement;
-  fields.forEach((field, i) => {
-    if (a == field) fields[i + 1]?.focus();
-  });
+
+  switchOnIntermediateElems.call(fields, a);
   if (a == fields[fields.length - 1]) submitFields();
 }
 function submitFields() {
   if (confirmation.isEmpty()) return;
 
   let check = confirmation.isAlright();
-  if (!check) errorMes();
-  else successMes();
+  if (!check) showErrorMes();
+  else showSuccessMes();
 }

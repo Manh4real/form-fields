@@ -35,6 +35,7 @@
   content: "log in";
   position: absolute;
   top: 0;
+  width: max-content;
   transform: translateY(50%) rotate(-30deg);
   font-size: 9rem;
   font-weight: bolder;
