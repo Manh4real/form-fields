@@ -128,18 +128,18 @@ form {
   background: transparent;
   color: #53aff1;
 }
-.pw-field .message {
+.pw-field .forgot-pw-message {
   position: absolute;
   bottom: -18px;
   right: 0;
 }
-.message a {
+.forgot-pw-message a {
   text-decoration: none;
   font-weight: bold;
   font-size: 11px;
   color: #53aff1;
 }
-.message a:hover {
+.forgot-pw-message a:hover {
   text-decoration: underline;
 }
 .pw .show-pw {
